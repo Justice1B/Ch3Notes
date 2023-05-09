@@ -49,8 +49,8 @@ function createChar(character, list){
     character.Race = pickRandomChoice2(Race);
     console.log("Rolling Strength")
     character.strength = rollStat(diceRolled);
-    console.log("Rolling Dexterity")
-    character.dexterity = rollStat(diceRolled);
+    console.log("Rolling Magic")
+    character.magic = rollStat(diceRolled);
     console.log("Rolling Constitution")
     character.constitution = rollStat(diceRolled);
     console.log("Rolling Intelligence")
@@ -69,7 +69,7 @@ function displayChar(char){
     console.log(`Race: ${char.race}`);
     console.log(`Eye Color: ${char.eyeColor}`);
     console.log(`STR: ${char.strength}`);
-    console.log(`DEX: ${char.dexterity}`);
+    console.log(`DEX: ${char.magic}`);
     console.log(`CON: ${char.constitution}`);
     console.log(`INT: ${char.intelligence}`);
     console.log(`WIS: ${char.wisdom}`);
