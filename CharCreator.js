@@ -2,7 +2,7 @@ const readline = require('readline-sync');
 
 let diceRolled = []
 let eyeColors = ['blue','green','brown','hazel','black'];
-let Race = ['Human','Fairy','Goblin','Goliath','Gnome','Elf','Dwarf','Minotaur','Orc'];
+let Race = ['Human','Fairy','Goblin','Goliath','Mexican','Asian','Dwarf','Monkey','Giant','God','Angel','Devil','Demon','American'];
 let character1 = {
 //empty to start
 }
@@ -30,7 +30,7 @@ function sum(list){
 
 function rollStat(list){
     list = [];
-    rollDice(5, list);
+    rollDice(6, list);
     return sum(list);
 }
 
@@ -49,16 +49,18 @@ function createChar(character, list){
     character.Race = pickRandomChoice2(Race);
     console.log("Rolling Strength")
     character.strength = rollStat(diceRolled);
+    console.log("Rolling Speed");
+    character.speed = rollStat(diceRolled);
     console.log("Rolling Magic")
     character.magic = rollStat(diceRolled);
-    console.log("Rolling Constitution")
-    character.constitution = rollStat(diceRolled);
+    console.log("Rolling Skill")
+    character.skill = rollStat(diceRolled);
     console.log("Rolling Intelligence")
     character.intelligence = rollStat(diceRolled);
     console.log("Rolling Wisdom")
     character.wisdom = rollStat(diceRolled);
-    console.log("Rolling Charisma")
-    character.charisma = rollStat(diceRolled);
+    console.log("Rolling Durability")
+    character.durability = rollStat(diceRolled);
     character.luck = rolld6();
     console.log(character)
 }
@@ -69,11 +71,12 @@ function displayChar(char){
     console.log(`Race: ${char.race}`);
     console.log(`Eye Color: ${char.eyeColor}`);
     console.log(`STR: ${char.strength}`);
+    console.log(`SPE: ${char.speed}`);
     console.log(`DEX: ${char.magic}`);
-    console.log(`CON: ${char.constitution}`);
+    console.log(`CON: ${char.skill}`);
     console.log(`INT: ${char.intelligence}`);
     console.log(`WIS: ${char.wisdom}`);
-    console.log(`CHA: ${char.charisma}`);
+    console.log(`DUR: ${char.durability}`);
     console.log(`LUCK: ${char.luck}`);
     console.log('-------------------------------');
 }
